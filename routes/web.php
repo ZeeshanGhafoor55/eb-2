@@ -6,6 +6,8 @@ use App\Http\Controllers\Menu\MenuController;
 use App\Http\Controllers\Footer\FooterController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Home\HomeCard;
+use App\Http\Controllers\Testimonial\Team;
+use App\Http\Controllers\Faq\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,4 +60,25 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard/homecard/edit/{id}', [HomeCard::class, 'edit']);
     Route::put('/dashboard/homecard/update/{id}', [HomeCard::class, 'update']);
     Route::get('/dashboard/homecard/delete/{id}', [HomeCard::class, 'destroy']);
+
+    // Testimonials
+    Route::get('/dashboard/testimonial', [Team::class, 'index']);
+    Route::get('/dashboard/testimonial/create', [Team::class, 'create']);
+    Route::post('/dashboard/testimonial/create', [Team::class, 'store']);
+    Route::get('/dashboard/testimonial/edit/{id}', [Team::class, 'edit']);
+    Route::put('/dashboard/testimonial/update/{id}', [Team::class, 'update']);
+    Route::get('/dashboard/testimonial/delete/{id}', [Team::class, 'destroy']);
+
+    // Faqs
+    Route::get('/dashboard/faq', [FaqController::class, 'index']);
+    Route::get('/dashboard/faq/create', [FaqController::class, 'create']);
+    Route::post('/dashboard/faq/create', [FaqController::class, 'store']);
+    Route::get('/dashboard/faq/edit/{id}', [FaqController::class, 'edit']);
+    Route::put('/dashboard/faq/update/{id}', [FaqController::class, 'update']);
+    Route::get('/dashboard/faq/delete/{id}', [FaqController::class, 'destroy']);
+    
+
+
+
+
 });

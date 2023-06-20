@@ -363,6 +363,18 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="{{url('/dashboard/testimonial/create')}}" class="nav-link">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <p>Testimonial</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('/dashboard/faq/create')}}" class="nav-link">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <p>Faq</p>
+            </a>
+          </li>
 
 
 
