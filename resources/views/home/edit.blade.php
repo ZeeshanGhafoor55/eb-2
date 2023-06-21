@@ -60,11 +60,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="card" style="background-color:#dbd1d1; padding:15px"!important;>
                                 <div class="form-group" >
                                     <label for="">Hero Image</label>
-                                    <input type="text" name="hero_btn_img" class="form-control"  placeholder="Title" value="{{$home->hero_btn_img}}">
+                                    <select name="hero_img" class="form-control">
+                                        @foreach ($photo as $photos)
+                                        <option value="{{$photos->id}}">{{$photos->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    <!-- <input type="text" name="hero_img" class="form-control"  placeholder="Title" value="{{$home->hero_btn_img}}"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card" style="background-color:#dbd1d1; padding:15px"!important;>
+                                <div class="form-group" >
+                                    <label for="">Hero Background Image</label>
+                                    <select name="hero_bg_img" class="form-control">
+                                        @foreach ($photo as $photos)
+                                        <option value="{{$photos->id}}">{{$photos->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    <!-- <input type="text" name="hero_bg_img" class="form-control"  placeholder="Title" value="{{$home->hero_bg_img}}"> -->
                                 </div>
                             </div>
                         </div>
@@ -365,6 +383,42 @@
                                 <div class="form-group">
                                     <label for="">Description</label>
                                     <textarea name="faq_desc" rows="1" class="form-control ">{{$home->faq_desc}}</textarea>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                        <button type="submit" class="btn btn-primary">Update</button>  
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="m-0 font-weight-bold text-primary">SEO Section</h6>
+                    </div>
+                    <!-- <div class="col-6">
+                        <h6 style="text-align:right"><a href="{{'/dashboard/menu'}}" class="btn btn-primary btn-back">Back menu link</a></h6>
+                    </div> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            <div class="card" style="background-color:#dbd1d1; padding:15px"!important;>
+                                <div class="form-group" >
+                                    <label for="">Meta Title</label>
+                                    <input type="text" name="meta_title" class="form-control"  placeholder="Meta Title" value="{{$home->meta_title}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card" style="background-color:#dbd1d1; padding:15px"!important;>
+                                <div class="form-group">
+                                    <label for="">Meta Description</label>
+                                    <textarea name="meta_desc" rows="1" class="form-control ">{{$home->meta_desc}}</textarea>
                                 </div>
                             </div>
                         </div> 

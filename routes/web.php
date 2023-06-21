@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Home\HomeCard;
 use App\Http\Controllers\Testimonial\Team;
 use App\Http\Controllers\Faq\FaqController;
+use App\Http\Controllers\Media\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,11 +44,11 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard/delete/{id}', [MenuController::class, 'destroy']);
 
     // Footer Header Route
-    Route::get('/dashboard/footer', [FooterController::class, 'index']);
-    Route::get('/dashboard/footer/create', [FooterController::class, 'create']);
-    Route::post('/dashboard/footer/create', [FooterController::class, 'store']);
-    Route::get('/dashboard/footer/edit/{id}', [FooterController::class, 'edit']);
-    Route::put('/dashboard/footer/update/{id}', [FooterController::class, 'update']);
+    // Route::get('/dashboard/footer', [FooterController::class, 'index']);
+    // Route::get('/dashboard/footer/create', [FooterController::class, 'create']);
+    // Route::post('/dashboard/footer/create', [FooterController::class, 'store']);
+    Route::get('/dashboard/footer/edit', [FooterController::class, 'edit']);
+    Route::put('/dashboard/footer/update', [FooterController::class, 'update']);
 
     // Home Controller
     Route::get('/dashboard/home/edit', [HomeController::class, 'edit']);
@@ -76,6 +77,14 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard/faq/edit/{id}', [FaqController::class, 'edit']);
     Route::put('/dashboard/faq/update/{id}', [FaqController::class, 'update']);
     Route::get('/dashboard/faq/delete/{id}', [FaqController::class, 'destroy']);
+
+    // Media
+    Route::get('/dashboard/media', [MediaController::class, 'index']);
+    Route::get('dashboard/media/create', [MediaController::class, 'create']);
+    Route::post('dashboard/media/create', [MediaController::class, 'store']);
+    Route::get('/dashboard/media/edit/{id}', [MediaController::class, 'edit']);
+    Route::put('/dashboard/media/update/{id}', [MediaController::class, 'update']);
+    Route::get('/dashboard/media/delete/{id}', [MediaController::class, 'destroy']);
     
 
 

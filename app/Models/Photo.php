@@ -11,6 +11,13 @@ class Photo extends Model
 
     protected $table = 'photos';
     protected $fillable = [
-        'file'
+        'name',
+        'detail',
+        'image'
     ];
+
+    public function home()
+    {
+        return $this->hasMany(Post::class, 'hero_img', 'id');
+    }
 }

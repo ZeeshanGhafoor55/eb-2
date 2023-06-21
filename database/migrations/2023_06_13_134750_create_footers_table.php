@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('footer_col1_title');
+            $table->string('logo_img');
+            $table->string('footer_col1_img');
             $table->string('footer_col1_desc');
             $table->string('footer_col2_title');
             $table->string('footer_col2_link');

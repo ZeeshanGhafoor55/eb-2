@@ -16,6 +16,7 @@ class Home extends Model
         'hero_btn_text',
         'hero_btn_link',
         'hero_img',
+        'hero_bg_img',
         'greencard_title',
         'greencard_desc',
         'greencard_btntext',
@@ -42,4 +43,10 @@ class Home extends Model
         'faq_title',
         'faq_desc'
     ];
+
+
+    public function photo()
+    {
+        return $this->belongsTo(Photo::class, 'hero_img', 'id');
+    }
 }

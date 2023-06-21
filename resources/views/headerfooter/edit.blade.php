@@ -5,15 +5,42 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Footer</h1>
+    <h1 class="h3 mb-2 text-gray-800">Website Setting</h1>
 
     @if(session('status'))
         <div class="alert alert-success">{{session('status')}}</div>
     @endif
 <!-- DataTales Example -->
-    <form action="{{url('/dashboard/footer/update/'.$footer->id)}}" method="POST" enctype="multipart/form-data">
+    <form action="{{url('/dashboard/footer/update')}}" method="POST" enctype="multipart/form-data">
      @csrf
      @method('PUT')
+     <div class="card mb-4">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="m-0 font-weight-bold text-primary">Header</h6>
+                    </div>
+                    <!-- <div class="col-6">
+                        <h6 style="text-align:right"><a href="{{'/dashboard/menu'}}" class="btn btn-primary btn-back">Back menu link</a></h6>
+                    </div> -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div class="row justify-content-between">
+                        <div class="col-12">
+                            <div class="card" style="background-color:#dbd1d1; padding:15px"!important;>
+                                <div class="form-group" >
+                                    <label for="">Header Logo</label>
+                                    <input type="text" name="logo_img" class="form-control"  placeholder="Logo Image" value="{{$footer->logo_img}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                        <!-- <button type="submit" class="btn btn-primary">Create</button> -->  
+                </div>
+            </div>
+        </div>
         <div class="card mb-4">
             <div class="card-header py-3">
                 <div class="row">

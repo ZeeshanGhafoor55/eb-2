@@ -42,13 +42,6 @@ class Team extends Controller
 
     public function update(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'desc' => 'required',
-            'name' => 'required',
-            'country' => 'required',
-          ]);
-          
         $testimonial = Testimonial::find($id);
 
         $input = $request->all();

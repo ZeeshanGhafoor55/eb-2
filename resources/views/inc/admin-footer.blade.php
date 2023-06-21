@@ -1,10 +1,10 @@
-@php
+<!-- @php
     use App\Models\Footer;
     $footer = Footer::first();
-@endphp
+@endphp -->
  <!-- /.content-wrapper -->
  <footer class="main-footer">
-    <strong>Copyright  <a href="https://adminlte.io">{{$footer->copyright}}
+    <strong>Copyright  <a href="https://adminlte.io">admin
      
     </a>.</strong>
     All rights reserved.

@@ -327,17 +327,8 @@
             </ul>
           </li> -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
                 <a href="" class="nav-link">
-                  <i class="fa fa-home" aria-hidden="true"></i>
+                  <i class="nav-icon fas fa-book" aria-hidden="true"></i>
                   <p>Home <i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
@@ -355,14 +346,6 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="fa fa-address-card" aria-hidden="true"></i>
-                  <p>About <i class="fas fa-angle-left right"></i></p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="{{url('/dashboard/testimonial/create')}}" class="nav-link">
               <i class="fa fa-home" aria-hidden="true"></i>
@@ -375,77 +358,34 @@
               <p>Faq</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{url('/dashboard/menu')}}" class="nav-link">
+              <i class="fa fa-home"></i>
+              <p>
+                Main Menu
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('/dashboard/media/create')}}" class="nav-link">
+              <i class="fa fa-home"></i>
+              <p>
+                Media
+              </p>
+            </a>
+          </li>
 
 
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('/dashboard/footer/edit')}}" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
-                Setting
-                <i class="fas fa-angle-left right"></i>
+                Website Setting
+                <!-- <i class="fas fa-angle-left right"></i> -->
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{url('/dashboard/menu')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Main Menu
-                    <!-- <i class="fas fa-angle-left right"></i> -->
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('/dashboard/footer')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Header-Footer Setting</p>
-                </a>
-              </li>
-              <!-- <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/language-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Language Menu</p>
-                </a>
-              </li> -->
-              <!-- <!-- <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/pace.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pace</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
-                </a>
-              </li>
-            </ul> -->
           </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
